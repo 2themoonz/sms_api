@@ -1,0 +1,9 @@
+service: sms_api
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: serverlessUser
+  region: eu-west-1
+
+functions:
