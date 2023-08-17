@@ -3,7 +3,14 @@ service: sms_api
 provider:
   name: aws
   runtime: nodejs12.x
-  profile: serverlessUser
-  region: eu-west-1
+  profile: AdministratorAccess-321365023689
+  region: ap-southeast-1
 
 functions:
+  sendSMS:
+    handler: lambdas/endpoints/sendSMS.handler
+    events:
+      - http:
+          path: send-sms
+          method: post
+          cors: true
