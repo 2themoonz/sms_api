@@ -1,4 +1,4 @@
-service: sms_api
+service: sms-api
 
 provider:
   name: aws
